@@ -23,11 +23,4 @@ jobs:
 
       - name: Run tests
         run: npm test
-
-  build-and-push:
-    needs: test  # Run only if tests pass
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+        
