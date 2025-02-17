@@ -3,7 +3,7 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      - main  # Runs on push to main branch
+      - master  # Runs on push to master branch
 
 jobs:
   test:
@@ -23,4 +23,3 @@ jobs:
 
       - name: Run tests
         run: npm test
-        
