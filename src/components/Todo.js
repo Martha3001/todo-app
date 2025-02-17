@@ -54,7 +54,7 @@ function Todo() {
                 Edit
               </button>
               <button onClick={() => deleteTask(index)} className="delete-button">
-                Delete
+                Complete
               </button>
             </div>
           </li>

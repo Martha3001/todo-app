@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+# 📝 Simple Todo App (React + Docker)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple Todo web application built with **React** and packaged as a **Docker container**.  
+It includes **Add, Edit, Delete, and View** functionality with unit tests and a GitHub Actions CI/CD pipeline.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
+✅ Add, Edit, Delete, and View Todos  
+✅ Built with **React**  
+✅ **Dockerized** for easy deployment  
+✅ **GitHub Actions CI/CD** for automated testing and deployment  
+✅ Hosted on **Docker Hub**  
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📦 Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### **1️⃣ Clone the Repository**
+```sh
+git clone https://github.com/Martha3001/todo-app.git
+cd todo-app
 
-### `npm test`
+2️⃣ Install Dependencies
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+npm install
 
-### `npm run build`
+3️⃣ Run Locally
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+npm start
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Now open http://localhost:3000 in your browser.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+🐳 Running with Docker
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1️⃣ Build Docker Image
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+docker build -t todo-app .
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2️⃣ Run Docker Container
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+docker run -p 3000:3000 todo-app
 
-## Learn More
+Now, open http://localhost:3000.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3️⃣ Pull Image from Docker Hub
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+If you want to run the pre-built image from Docker Hub, use:
 
-### Code Splitting
+docker pull martha3001/todo-app:latest
+docker run -p 3000:3000 martha3001/todo-app
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+🛠️ Running Tests
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+To run unit tests:
 
-### Making a Progressive Web App
+npm test
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+🔄 CI/CD with GitHub Actions
 
-### Advanced Configuration
+This project includes a GitHub Actions workflow that:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. Runs unit tests on every push.
 
-### Deployment
+2. Builds a Docker image.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+3. Pushes the image to Docker Hub.
 
-### `npm run build` fails to minify
+📄 Workflow File: .github/workflows/main.yml
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+🎯 Tech Stack
+
+Frontend: React.js
+
+Styling: CSS
+
+Containerization: Docker
+
+CI/CD: GitHub Actions
+
+---

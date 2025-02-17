@@ -41,7 +41,7 @@ test("deletes a task", () => {
   fireEvent.change(input, { target: { value: "Learn React" } });
   fireEvent.click(button);
 
-  fireEvent.click(screen.getByText("Delete"));
+  fireEvent.click(screen.getByText("Complete"));
 
   expect(screen.queryByText("Learn React")).not.toBeInTheDocument();
 });
