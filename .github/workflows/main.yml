@@ -40,8 +40,8 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/todo-app:latest .
+          docker build -t martha3001/todo-app:latest .
 
       - name: Push Docker image to Docker Hub
         run: |
-          docker push ${{ secrets.DOCKER_USERNAME }}/todo-app:latest
+          docker push martha3001/todo-app:latest
